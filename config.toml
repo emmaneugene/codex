@@ -1,4 +1,42 @@
-model = "gpt-5.4"
-model_reasoning_effort = "high"
+model = "gpt-5.5"
+model_reasoning_effort = "low"
+personality = "friendly"
 web_search = "cached"
 sandbox_mode = "danger-full-access"
+
+[features]
+memories = false
+
+[shell_environment_policy]
+inherit = "core"
+
+[shell_environment_policy.set]
+DISABLE_TELEMETRY = "1"
+
+[tui]
+status_line = [
+    "model-with-reasoning",
+    "current-dir",
+    "git-branch",
+    "context-window-size",
+    "used-tokens",
+    "session-id",
+]
+
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
