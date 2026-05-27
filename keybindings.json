@@ -1,0 +1,14 @@
+[
+  {
+    "command": "toggleBrowserPanel",
+    "key": null
+  },
+  {
+    "command": "toggleSidePanel",
+    "key": "Command+Shift+B"
+  },
+  {
+    "command": "toggleTerminal",
+    "key": "Ctrl+`"
+  }
+]

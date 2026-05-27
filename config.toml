@@ -5,7 +5,10 @@ web_search = "cached"
 sandbox_mode = "danger-full-access"
 
 [features]
+hooks = true
 memories = false
+js_repl = false
+multi_agent = true
 
 [shell_environment_policy]
 inherit = "core"
@@ -40,3 +43,33 @@ enabled = true
 
 [plugins."browser@openai-bundled"]
 enabled = true
+[desktop]
+ambient-suggestions-enabled = false
+appearanceTheme = "dark"
+appearanceDarkCodeThemeId = "one"
+sansFontSize = 12
+codeFontSize = 10
+usePointerCursors = true
+mac-menu-bar-enabled = false
+conversationDetailMode = "STEPS_COMMANDS"
+notifications-turn-mode = "always"
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#4d78cc"
+contrast = 50
+ink = "#abb2bf"
+opaqueWindows = false
+surface = "#282c34"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+code = '"Hack Nerd Font"'
+ui = "Geist, Inter"
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#8cc265"
+diffRemoved = "#e05561"
+skill = "#c162de"
+
+[desktop.open-in-target-preferences]
+global = "zed"
+
