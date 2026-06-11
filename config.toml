@@ -9,6 +9,7 @@ hooks = true
 memories = false
 js_repl = false
 multi_agent = true
+terminal_resize_reflow = true
 
 [shell_environment_policy]
 inherit = "core"
@@ -17,14 +18,8 @@ inherit = "core"
 DISABLE_TELEMETRY = "1"
 
 [tui]
-status_line = [
-    "model-with-reasoning",
-    "current-dir",
-    "git-branch",
-    "context-window-size",
-    "used-tokens",
-    "session-id",
-]
+status_line = ["model-with-reasoning", "current-dir", "git-branch", "thread-id", "run-state", "context-used"]
+status_line_use_colors = true
 
 [plugins."computer-use@openai-bundled"]
 enabled = true
@@ -53,6 +48,8 @@ usePointerCursors = true
 mac-menu-bar-enabled = false
 conversationDetailMode = "STEPS_COMMANDS"
 notifications-turn-mode = "always"
+localeOverride = "en-US"
+show-context-window-usage = true
 
 [desktop.appearanceDarkChromeTheme]
 accent = "#4d78cc"
