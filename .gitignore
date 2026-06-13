@@ -5,10 +5,12 @@ cache/
 computer-use/
 log/
 pets/
+process_manager/
 sessions/
 shell_snapshots/
 skills/.system/
 sqlite/
+vendor_imports/
 
 *cache.json
 *.sqlite*
