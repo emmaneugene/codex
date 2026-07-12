@@ -1,5 +1,5 @@
-model = "gpt-5.5"
-model_reasoning_effort = "low"
+model = "gpt-5.6-sol"
+model_reasoning_effort = "medium"
 personality = "friendly"
 web_search = "cached"
 sandbox_mode = "danger-full-access"
@@ -12,34 +12,41 @@ js_repl = false
 
 [shell_environment_policy]
 inherit = "core"
-
 [shell_environment_policy.set]
 DISABLE_TELEMETRY = "1"
 
 [tui]
-status_line = ["model-with-reasoning", "current-dir", "git-branch", "thread-id", "context-used", "run-state"]
+status_line = [
+    "model-with-reasoning",
+    "current-dir",
+    "git-branch",
+    "thread-id",
+    "context-used",
+    "run-state",
+]
 status_line_use_colors = false
+theme = "inspired-github"
 
 [plugins."computer-use@openai-bundled"]
 enabled = true
-
 [plugins."github@openai-curated"]
 enabled = true
-
 [plugins."documents@openai-primary-runtime"]
 enabled = true
-
 [plugins."spreadsheets@openai-primary-runtime"]
 enabled = true
-
 [plugins."presentations@openai-primary-runtime"]
 enabled = true
-
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
 [plugins."browser@openai-bundled"]
 enabled = true
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
 [desktop]
 ambient-suggestions-enabled = false
-appearanceTheme = "dark"
+appearanceTheme = "light"
 appearanceDarkCodeThemeId = "one"
 sansFontSize = 12
 codeFontSize = 10
@@ -49,6 +56,8 @@ conversationDetailMode = "STEPS_COMMANDS"
 notifications-turn-mode = "always"
 localeOverride = "en-US"
 show-context-window-usage = true
+appearanceLightCodeThemeId = "linear"
+followUpQueueMode = "queue"
 
 [desktop.appearanceDarkChromeTheme]
 accent = "#4d78cc"
@@ -56,16 +65,26 @@ contrast = 50
 ink = "#abb2bf"
 opaqueWindows = false
 surface = "#282c34"
-
 [desktop.appearanceDarkChromeTheme.fonts]
 code = '"Hack Nerd Font"'
 ui = "Geist, Inter"
-
 [desktop.appearanceDarkChromeTheme.semanticColors]
 diffAdded = "#8cc265"
 diffRemoved = "#e05561"
 skill = "#c162de"
-
+[desktop.appearanceLightChromeTheme]
+accent = "#5e6ad2"
+contrast = 45
+ink = "#1b1b1b"
+opaqueWindows = true
+surface = "#fcfcfd"
+[desktop.appearanceLightChromeTheme.fonts]
+code = '"Hack Nerd Font"'
+ui = "Geist, Inter"
+[desktop.appearanceLightChromeTheme.semanticColors]
+diffAdded = "#52a450"
+diffRemoved = "#c94446"
+skill = "#8160d8"
 [desktop.open-in-target-preferences]
 global = "zed"
 

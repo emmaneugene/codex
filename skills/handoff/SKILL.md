@@ -5,7 +5,7 @@ description: "Create a durable HANDOFF.md for a repo or working directory that c
 
 # Handoff
 
-Use this skill when the user wants a durable written handoff instead of just another chat response.
+Use this skill when the user wants a durable written handoff.
 
 The main output of this skill is a `HANDOFF.md` file.
 
@@ -41,13 +41,13 @@ Use the template in `template.md`.
 3. Prefer concrete bullets over long prose.
 4. Preserve important decisions, constraints, caveats, and file paths exactly.
 5. Make `## Next Task` actionable enough that a new session could start from it immediately.
-6. Write the final result to the selected output path with the `write` tool.
+6. Write the final result to the selected output path.
 7. After writing, give the user a short summary of what was captured and where the file was written.
 
 ## Tailoring
 
 Treat any user-provided arguments as guidance for the handoff focus, such as:
 
-- what should happen next
-- what phase or area to emphasize
-- what the receiving person/session should do first
+- What should happen next
+- What phase or area to emphasize
+- What the receiving person/session should do first

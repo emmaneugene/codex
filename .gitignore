@@ -5,20 +5,25 @@ cache/
 computer-use/
 log/
 pets/
+plugins/
 process_manager/
 sessions/
 shell_snapshots/
 skills/.system/
 sqlite/
+worktrees/
 vendor_imports/
 
 *cache.json
 *.sqlite*
 
 auth.json
+chrome-native-hosts.json
+chrome-native-hosts-v2.json
 history.jsonl
 installation_id
 session_index.jsonl
 version.json
+.app-server-state-reconciled-v1
 .codex-global-state.json
 .personality_migration
